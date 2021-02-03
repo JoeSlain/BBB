@@ -63,13 +63,12 @@ print("Hour of the pump (24h format) ex:22")
 pump_hour = input()
 print("amount USDT you want to invest")
 amount = input()
-coin = ""
+coin = []
 t = datetime.datetime.today() 
 pmp_time = datetime.datetime(t.year,t.month,t.day,int(pump_hour)-1,59,59) 
 while pmp_time > datetime.datetime.now():
     time.sleep(0.5)
 while not coin:
     for message in client.iter_messages(target_group, limit=1):
-        coin = re.findall("[\$]\w+", message.text)[0].replace('$', '')
-
-place_order(coin, amount)
+        coin = re.findall(r"[$]\w+", message.text)
+place_order(coin[0].replace('$', ''), amount)
