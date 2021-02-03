@@ -15,9 +15,9 @@ To install a module:
 
 # HOW TO USE
 Fill the following fields in main.py:   
-  -api_id = YOUR TELEGRAM ID  
-  -api_hash = 'YOUR TELEGRAM HASH'  
-  -phone = 'YOUR PHONE NUMBER (+123456789)' 
+  - api_id = YOUR TELEGRAM ID  
+  - api_hash = 'YOUR TELEGRAM HASH'  
+  - phone = 'YOUR PHONE NUMBER (+123456789)' 
 Fill the following fields in order_maker.py:   
   -     client = Client("YOUR BINANCE API KEY", "YOUR BINANCE SECRET KEY")
 # Things you must know before using this bot
