@@ -55,7 +55,7 @@ chats.extend(result.chats)
 #
 #g_index = input("Enter a Number: ")
 for g in chats:
-    if g.title=="Testbotz":
+    if g.title=="Big Pump Signal":
         target_group=g       
 #target_group=chats[int(g_index)]
 
