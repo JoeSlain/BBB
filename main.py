@@ -70,6 +70,6 @@ while pmp_time > datetime.datetime.now():
     time.sleep(0.5)
 while not coin:
     for message in client.iter_messages(target_group, limit=1):
-        coin = re.findall("[$]\w+", message.text)[0].replace('$', '')
+        coin = re.findall("[\$]\w+", message.text)[0].replace('$', '')
 
 place_order(coin, amount)
