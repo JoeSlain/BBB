@@ -20,7 +20,7 @@ Fill the following fields in main.py:
   -phone = 'YOUR PHONE NUMBER (+123456789)' 
 Fill the following fields in order_maker.py:   
   -     client = Client("YOUR BINANCE API KEY", "YOUR BINANCE SECRET KEY")
-# Aknoledgments
+# Things you must know before using this bot
   - This bot trade ONLY USDT pairs
   - This bot retrieve the coin only if it's sent in the following format $coinname
   - You need to create both a Telegram and a Binance API
