@@ -15,7 +15,7 @@ print(bcolors.OKGREEN + custom_fig.renderText("L'avé Maria") + bcolors.ENDC)
 print(bcolors.OKBLUE + "By Joss le colosse\n\n" + bcolors.ENDC)
 
 api_id = YOUR TELEGRAM ID
-api_hash = 'YOUR TELEGRAM HASH'
+api_hash = 'YOUR API HASH'
 phone = 'YOUR PHONE NUMBER (+123456789)'
 client = TelegramClient(phone, api_id, api_hash)
 
@@ -55,20 +55,21 @@ chats.extend(result.chats)
 #
 #g_index = input("Enter a Number: ")
 for g in chats:
-    if g.title=="Big Pump Signal":
+    if g.title=="Testbotz":
         target_group=g       
 #target_group=chats[int(g_index)]
 
 print("Hour of the pump (24h format) ex:22")
 pump_hour = input()
-print("amount USDT you want to invest")
+print("amount BTC you want to invest")
 amount = input()
 coin = []
 t = datetime.datetime.today() 
-pmp_time = datetime.datetime(t.year,t.month,t.day,int(pump_hour)-1,59,59) 
+pmp_time = datetime.datetime(t.year,t.month,t.day,int(pump_hour)-1,59,59,5000) 
 while pmp_time > datetime.datetime.now():
-    time.sleep(0.5)
+    time.sleep(0.1)
 while not coin:
-    for message in client.iter_messages(target_group, limit=1):
+    time.sleep(0.1)
+    for message in client.iter_messages(target_group, limit=2):
         coin = re.findall(r"[$]\w+", message.text)
-place_order(coin[0].replace('$', ''), amount)
+place_order(coin[0].replace('$', '').upper(), amount)
