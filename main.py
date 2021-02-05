@@ -61,7 +61,7 @@ for g in chats:
 
 print("Hour of the pump (24h format) ex:22")
 pump_hour = input()
-print("amount USDT you want to invest")
+print("amount BTC you want to invest")
 amount = input()
 coin = []
 t = datetime.datetime.today() 
